@@ -9,17 +9,17 @@ module.exports = {
 }
 
 function findAll() {
-    return db('Users')
+    return db('user')
 }
 
 function findById(id) {
-    return db('Users')
+    return db('user')
     .where({ id })
 }
 
 function addUser(user) {
 
-    return db('Users')
+    return db('user')
     .insert(user)
     .then(() => {
         findAll()
@@ -27,13 +27,13 @@ function addUser(user) {
 }
 
 function deleteUser(id) {
-    return db('Users')
+    return db('user')
     .where({ id })
     .del()
 }
 
 function editUser(id, changes) {
-    return db('Users')
+    return db('user')
     .where({ id })
     .update(changes)
 }

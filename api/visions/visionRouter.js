@@ -34,7 +34,7 @@ router
 .post('/', (req, res) => {
     const {body} = req
 
-    dbModel.addRec(body)
+    dbModel.addVision(body)
         .then(post => {
             res.status(201).json(post)
         })
@@ -47,7 +47,7 @@ router
 .delete('/:id', (req, res) => {
     const {id} = req.params
 
-    dbModel.deleteRec(id)
+    dbModel.deleteVision(id)
         .then(() => res.sendStatus(204))
         .catch(err => {
             res.status(500).json(err)
@@ -59,7 +59,7 @@ router
     const {id} = req.params
     const {body} = req
 
-    dbModel.editRec(id, body) 
+    dbModel.editVision(id, body) 
         .then(post => {
             res.status(200).json(body)
         })
