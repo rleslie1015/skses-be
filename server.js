@@ -1,7 +1,7 @@
-const express = require('express');
+const express = require('express');  // import the express package
 const helmet = require('helmet');
 const cors = require('cors');
-const server = express();
+const server = express();   // creates the server
 const userRouter = require('./api/user/userRouter');
 const visRouter = require('./api/visions/visionRouter');
 
@@ -12,7 +12,10 @@ server.use(cors());
 server.use('/users', userRouter);
 server.use('/visions', visRouter);
 
-server.get('/', (req, res) => {
+// The request handler 
+// When using Node.js to build a server, we use a simgle request handler function for all request
+server.get('/', (req, res) => {  // handle requests to the root of the API the / route
+    // res.send("hello from express");
     res.status(200).json({ message: 'API IS RUNNING!'})
 })
 
