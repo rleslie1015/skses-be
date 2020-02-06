@@ -2,11 +2,12 @@
 # Node back end for my personal vision board app
 **This is a personal side project to practice my node/express skills. It includes my notes on Node.js and Express.**
 
-To write a simple web server with Node.js 
-1. Use Node `HTTP` module to abstract away complex network related operations
-2. Write the single *request handler* function that will handle all the requests to the server
-
  
+### Third party middleware
+- Morgan - logger 
+- CORS   - enables cross site communication between server and client
+- Helmet - security
+
 
 ### A vision in the database has the following structure 
 ### The image url string is not required.
@@ -25,7 +26,3 @@ To write a simple web server with Node.js
 |Update a vision| PUT| /api/visions/:id
 |Remove a vision| DELETE| /api/visions/:id
 |Add a vision background image | PUT|/api/visions/:id/image|
-
-## Common JS Module system
-- import a module using: `require();`
-- export a module using : `module.export();`
