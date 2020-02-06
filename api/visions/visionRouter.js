@@ -1,8 +1,8 @@
-const router = require('express').Router();
+const router = require('express').Router();  // makes this file a router
 const dbModel = require('./visionModel');
 
 router
-    .get('/', (req, res) => {
+    .get('/', (req, res) => { 
         dbModel.findAll()
             .then(post => {
                 res.status(201).json(post)
@@ -33,7 +33,7 @@ router
 router 
 .post('/', (req, res) => {
     const {body} = req
-
+    console.log(body)
     dbModel.addVision(body)
         .then(post => {
             res.status(201).json(post)
