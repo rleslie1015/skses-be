@@ -1,3 +1,4 @@
+// Server.js has the configuration of the server
 const express = require('express');  // import the express package
 const helmet = require('helmet');
 const cors = require('cors');
@@ -5,12 +6,13 @@ const server = express();   // creates the server
 const userRouter = require('./api/user/userRouter');
 const visRouter = require('./api/visions/visionRouter');
 
-
+// middleware
 server.use(express.json());
 server.use(helmet());
 server.use(cors());
-server.use('/users', userRouter);
-server.use('/visions', visRouter);
+// requests to routes that begin with /users or /visions 
+server.use('/api/users', userRouter); // the traffic gets sent to userRouter
+server.use('/api/visions', visRouter); // this traffic gets sent to visRouter
 
 // The request handler 
 // When using Node.js to build a server, we use a simgle request handler function for all request

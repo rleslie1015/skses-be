@@ -1,6 +1,6 @@
 
 # Node back end for my personal vision board app
-**This is a personal side project to practice my node/express skills.**
+**This is a personal side project to practice my node/express skills. It includes my notes on Node.js and Express.**
 
 To write a simple web server with Node.js 
 1. Use Node `HTTP` module to abstract away complex network related operations
@@ -8,8 +8,8 @@ To write a simple web server with Node.js
 
  
 
-  - A vision in the database has the following structure 
-  - The image url string is not required.
+### A vision in the database has the following structure 
+### The image url string is not required.
 
  ```
  {
@@ -21,8 +21,11 @@ To write a simple web server with Node.js
 |Action|Method|Endpoint|
 |:--|:--:|:--
 |List visions|GET|/visions
-|Create a vision| POST| /visions
-|Update a vision| PUT| /visions/:id
-|Remove a vision| DELETE| /visions/:id
-|Add a vision background image | POST/PUT|/visions/:id/image|
+|Create a vision| POST| /api/visions
+|Update a vision| PUT| /api/visions/:id
+|Remove a vision| DELETE| /api/visions/:id
+|Add a vision background image | PUT|/api/visions/:id/image|
 
+## Common JS Module system
+- import a module using: `require();`
+- export a module using : `module.export();`

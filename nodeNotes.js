@@ -1,24 +1,26 @@
+// nothing to see here just some notes for meself :) 
+
 /****************************************************************************************************
  * ***********************************      Node JS     ********************************************
  * ************************************************************************************************** */
 
-const http = require('http'); //built in node.js module to handle http traffic
+// const http = require('http'); //built in node.js module to handle http traffic
 
-const hostname = '127.0.0.1'; // the local computer where the server is running
+// const hostname = '127.0.0.1'; // the local computer where the server is running
 
-const port = 3000; // port we'll use to watch for traffic 
+// const port = 3000; // port we'll use to watch for traffic 
 
-const server = http.createServer((req, res) => {
-    //creates our server
-    res.statusCode = 200
-    res.setHeader('Content-Type', 'text/plain'); 
-    res.end('Hello World from Node\n');
-});
+// const server = http.createServer((req, res) => {
+//     //creates our server
+//     res.statusCode = 200
+//     res.setHeader('Content-Type', 'text/plain'); 
+//     res.end('Hello World from Node\n');
+// });
 
-server.listen(port, hostname, () => {
-    // start watching for connections on the port spec$ified
-    console.log(`Server running at http://${hostname}:${port}/`);
-});
+// server.listen(port, hostname, () => {
+//     // start watching for connections on the port spec$ified
+//     console.log(`Server running at http://${hostname}:${port}/`);
+// });
 
 
 // Node js is runtime envirment or platform that runs JS applications outside of the browser
