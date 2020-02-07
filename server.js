@@ -2,6 +2,7 @@
 const express = require('express');  // import the express package
 const helmet = require('helmet');
 const cors = require('cors');
+const morgan = require('morgan');
 const server = express();   // creates the server
 const userRouter = require('./api/user/userRouter');
 const visRouter = require('./api/visions/visionRouter');
@@ -10,7 +11,7 @@ const logger = require('./middleware/logger');
 server.use(express.json());  // all endpoint on our server will affected by .use()
 server.use(helmet());
 server.use(cors());
-
+server.use(morgan('dev'));
 server.use(logger);
 // requests to routes that begin with /api/users or /api/visions 
 server.use('/api/users', userRouter); // the traffic gets sent to userRouter
