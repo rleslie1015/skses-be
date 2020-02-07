@@ -28,10 +28,11 @@ function editVision(id, changes) {
     .where({ id })
     .updates(changes)
 }
+
 // why did i put an id here? do i need this here?
 // function addVision(obj, id) { ?
 function addVision(obj) { 
-    return db('vision')
+    return db('visions')
     .insert(obj)
     .then(() => {
         findAll()
