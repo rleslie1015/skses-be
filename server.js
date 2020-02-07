@@ -5,14 +5,14 @@ const cors = require('cors');
 const server = express();   // creates the server
 const userRouter = require('./api/user/userRouter');
 const visRouter = require('./api/visions/visionRouter');
-
+const logger = require('./middleware/logger');
 // middleware
 server.use(express.json());  // all endpoint on our server will affected by .use()
 server.use(helmet());
 server.use(cors());
 
-
-// requests to routes that begin with /users or /visions 
+server.use(logger);
+// requests to routes that begin with /api/users or /api/visions 
 server.use('/api/users', userRouter); // the traffic gets sent to userRouter
 server.use('/api/visions', visRouter); // this traffic gets sent to visRouter
 
