@@ -1,11 +1,11 @@
-const router = require('express').Router();
+const router = require('express').Router();  // makes this file a router
 const dbModel = require('./visionModel');
 
 router
-    .get('/', (req, res) => {
+    .get('/', (req, res) => { 
         dbModel.findAll()
             .then(post => {
-                res.status(201).json(post)
+                res.status(200).json(post)
             })
             .catch(err => {
                 res.status(500).json(err.message)
