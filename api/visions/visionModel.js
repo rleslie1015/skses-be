@@ -28,9 +28,9 @@ function editVision(id, changes) {
     .where({ id })
     .updates(changes)
 }
-
-function addVision(obj, id) {
-    return db('vision')
+//changed id
+function addVision(obj) {
+    return db('visions')
     .insert(obj)
     .then(() => {
         findAll()
