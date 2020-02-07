@@ -5,7 +5,7 @@ router
     .get('/', (req, res) => { 
         dbModel.findAll()
             .then(post => {
-                res.status(201).json(post)
+                res.status(200).json(post)
             })
             .catch(err => {
                 res.status(500).json(err.message)
@@ -33,7 +33,7 @@ router
 router 
 .post('/', (req, res) => {
     const {body} = req
-    console.log(body)
+
     dbModel.addVision(body)
         .then(post => {
             res.status(201).json(post)

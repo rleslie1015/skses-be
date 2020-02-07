@@ -45,3 +45,16 @@ See server.js for server code.
 - export a module using : `module.export();`
 
 ## Middleware 
+```
+// logger
+function logger(req, res, next) {
+    console.log(
+        `[${new Date().toISOString()}] ${req.method} to ${req.url} ${req.get(
+            'Origin'
+        )}`
+    );
+    next();
+};
+
+server.use(logger); //logger is applied globaly
+```

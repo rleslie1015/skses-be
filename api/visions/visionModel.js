@@ -29,8 +29,8 @@ function editVision(id, changes) {
     .updates(changes)
 }
 // why did i put an id here? do i need this here?
-
-function addVision(obj, id) { 
+// function addVision(obj, id) { ?
+function addVision(obj) { 
     return db('vision')
     .insert(obj)
     .then(() => {
