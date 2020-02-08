@@ -65,3 +65,12 @@ Environment: the computer the program is running on. for example the dev runs th
 Applications also have servers where the applications is deployed so that users can interact with it: or the production environment.
 
 Also: Testing and Staging
+
+## Deploying API to Heroku
+1. Create an application on Heroku
+2. Set up continuous deployment from github
+3. Deploy Branch
+4. Make sure you have a start script in `package.json` :
+    ```
+    "start": "node index.js",  
+    ```
