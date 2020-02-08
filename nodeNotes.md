@@ -66,6 +66,10 @@ Applications also have servers where the applications is deployed so that users 
 
 Also: Testing and Staging
 
+Most development pipelines include different environments that often include development, testing and production.
+
+It’s recommended to extract away any values that need to change between environments, like database connections.
+
 ## Deploying API to Heroku
 1. Create an application on Heroku
 2. Set up continuous deployment from github
