@@ -11,12 +11,12 @@ module.exports = db;
 
 // THE FOLLOWING IS NOT BEST PRACTICE
 // the bare minimum config object
-const config = {
-    client: 'sqlite3',
-    connection: {
-      filename: './data/posts.db3',
-    },
-    useNullAsDefault: true,
-  };
+// const config = {
+//     client: 'sqlite3',
+//     connection: {
+//       filename: './data/posts.db3',
+//     },
+//     useNullAsDefault: true,
+//   };
   
-  module.exports = knex(config);
+//   module.exports = knex(config);
