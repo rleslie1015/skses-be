@@ -58,3 +58,10 @@ function logger(req, res, next) {
 
 server.use(logger); //logger is applied globaly
 ```
+## Web Deployment and Best Practices 
+
+Environment: the computer the program is running on. for example the dev runs the API on there local computer or developmetn environment.
+
+Applications also have servers where the applications is deployed so that users can interact with it: or the production environment.
+
+Also: Testing and Staging
