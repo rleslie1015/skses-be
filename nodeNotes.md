@@ -58,3 +58,38 @@ function logger(req, res, next) {
 
 server.use(logger); //logger is applied globaly
 ```
+## Web Deployment and Best Practices 
+
+Environment: the computer the program is running on. for example the dev runs the API on there local computer or developmetn environment.
+
+Applications also have servers where the applications is deployed so that users can interact with it: or the production environment.
+
+Also: Testing and Staging
+
+Most development pipelines include different environments that often include development, testing and production.
+
+It’s recommended to extract away any values that need to change between environments, like database connections.
+
+## Deploying API to Heroku
+1. Create an application on Heroku
+2. Set up continuous deployment from github
+3. Deploy Branch
+4. Make sure you have a start script in `package.json` :
+    ```
+    "start": "node index.js",  
+    ```
+
+## Relational Database Notes
+
+### Data Persistence
+* Infrequently accesed and not likely to be modified
+* A database is place to persistently store data
+* Three most common databases :
+
+       * Relational databases
+       * Document Databases
+       * Graph Database 
+### SQL
+- A query language we use to talk to relational databases 
+- We use a wrapper for sql in node like knex.js
+- 

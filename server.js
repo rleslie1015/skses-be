@@ -20,7 +20,6 @@ server.use('/api/visions', visRouter); // this traffic gets sent to visRouter
 // The request handler 
 // When using Node.js to build a server, we use a simgle request handler function for all request
 server.get('/', (req, res) => {  // handle requests to the root of the API the / route
-    // res.send("hello from express");
     res.status(200).json({ message: 'API IS RUNNING!'})
 })
 
