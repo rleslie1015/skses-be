@@ -3,6 +3,8 @@
 // we can use this library to write SQL statements in JavaScript
 const knex = require('knex')
 
+const environment = process.env.NODE_ENV || 'development';
+
 const knexConfig = require('../knexfile')
 
 const db = knex(knexConfig.development)
