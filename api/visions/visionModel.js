@@ -24,9 +24,9 @@ function deleteVision(id) {
 }
 
 function editVision(id, changes) {
-    return db(visions)
+    return db('visions')
     .where({ id })
-    .updates(changes)
+    .update(changes)
 }
 
 // why did i put an id here? do i need this here?
