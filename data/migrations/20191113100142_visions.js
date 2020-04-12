@@ -14,7 +14,7 @@ exports.up = function(knex) {
             .string('name', 255)
             .notNullable()
         tbl
-            .boolean("compleleted")
+            .boolean("completed")
             .defaultTo('false')
         tbl
             .string("image", 500)

@@ -31,10 +31,10 @@ function editVision(id, changes) {
 
 // why did i put an id here? do i need this here?
 // function addVision(obj, id) { ?
-function addVision(obj) { 
+function addVision(vis) { 
     return db('visions')
-    .insert(obj)
-    .then(() => {
-        findAll()
+    .insert(vis)
+    .then((ids) => {
+        return findById(ids[0]);
     })
 }
