@@ -1,5 +1,5 @@
 {
-  "name": "Vision-Board-2020-BE",
+  "name": "vision-board-2020-be",
   "version": "1.0.0",
   "description": "node back end for my personal vision board app",
   "main": "index.js",
